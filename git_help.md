@@ -167,7 +167,7 @@ flowchart TD
 git clone https://github.com/wty20191019/NMC_downloader.git
 cd NMC_downloader
 ```
-
+---
 ### 2. **日常管理操作**
 
 | 操作 | 命令 | 说明 |
@@ -185,7 +185,7 @@ cd NMC_downloader
 | **推送更新** | `git push origin main` | 上传到 GitHub 仓库 |
 | **拉取更新** | `git pull` | 获取远程最新代码 |
 
-
+---
 
 
 ### 3. **管理项目链接**
@@ -215,6 +215,78 @@ git push -u origin feature/new-download-source
 | **文档分支** | `docs/`          | `docs/update-api-guide`                            |
 | **优化分支** | `chore/`         | `chore/improve-build-speed`                         |
 
+---
+### 每日工作流程
+
+##### 拉取更新
+```git
+git pull
+```
+
+### 7x24__写写写写写写写写..............(写不动了) then：
+
+
+##### 查看状态
+```git
+git status
+```
+
+##### 添加文件____(`.`为所有文件，或`文件名`)
+```git
+git add .
+```
+
+##### 提交变更
+```git
+git commit -m "描述信息"
+```
+
+##### 推送更新
+```git
+git push origin main
+```
+
+##### 拉取更新
+```git
+git pull
+```
+
+---
+
+### 分支管理
+
+##### ​查看分支图​
+```git
+git log --oneline --graph --decorate --all
+```
+##### ​查看分支
+```git
+git branch
+```
+##### ​切换到分支____`branch-name`
+```git
+git checkout branch-name
+```
+##### ​合并分支____(将指定分支`branch-name`的更改合并到当前分支)
+```git
+git merge branch-name
+```
+##### ​删除分支`branch-name`
+```git
+git branch -d branch-name
+```
+##### ​创建新分支`new-branch`
+```git
+git branch new-branch
+```
+* 分支命名规范
+  * 功能分支 `feature/`       | `feature/user-login` `feature/issue-123-add-button` 
+  * 修复分支  `bugfix/` 或 `fix/` | `bugfix/login-error` `fix/456-header-overlap`   
+  * 热修分支  `hotfix/`        | `hotfix/critical-security-patch`                    
+  * 发布分支 `release/`       | `release/v2.1.0` `release/2025-09-18`               
+  * 文档分支  `docs/`          | `docs/update-api-guide`                            
+  * 优化分支 `chore/`         | `chore/improve-build-speed`                         
+---
 
 ### 5. **通过 .gitignore 忽略不需要管理的文件..**
 创建 `.gitignore` 文件：
