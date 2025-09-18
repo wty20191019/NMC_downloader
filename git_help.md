@@ -13,7 +13,7 @@
 | `status`        | 显示**工作区**和**暂存区**的状态                                         | `git status`                                                                              |
 | `commit`        | 将**暂存区**的更改提交到本地仓库                                         | `git commit -m "提交说明"`                                                                 |
 | `branch`        | 列出、创建或删除分支                                                     | `git branch` 查看分支；`git branch new-branch` 创建新分支；`git branch -d branch-name` 删除分支 |
-| `checkout`      | 切换分支或恢复文件                                                       | `git checkout branch-name` 切换分支；`git checkout -- filename.txt` 撤销对文件的修改        |
+| `checkout`      | 切换分支或恢复文件                                                       | `git checkout branch-name` 切换分支；`git checkout -- filename.txt` 撤销对文件的修改 ； 使用 git checkout (临时查看旧状态,例如`git checkout ece7fda`)       |
 | `switch`        | 切换分支 (Git 2.23+)                                                     | `git switch branch-name`                                                                  |
 | `merge`         | 将指定分支的更改合并到当前分支                                             | `git merge branch-name`                                                                   |
 | `rebase`        | 将当前分支的提交在另一个基点之上重新应用（**变基**）                       | `git rebase main`                                                                         |
