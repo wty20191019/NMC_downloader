@@ -1,7 +1,12 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "G:\\NMC_downloader\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{894B3137-362C-4E9D-869E-F9A7438D2D98}|nmc_downloader.pyproj|G:\\NMC_downloader\\git_help.md||{24510B54-A648-4D69-A6C5-F68CBDF07546}",
+      "RelativeMoniker": "D:0:0:{894B3137-362C-4E9D-869E-F9A7438D2D98}|nmc_downloader.pyproj|solutionrelative:git_help.md||{24510B54-A648-4D69-A6C5-F68CBDF07546}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -9,8 +14,26 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": -1,
+          "SelectedChildIndex": 0,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "git_help.md",
+              "DocumentMoniker": "G:\\NMC_downloader\\git_help.md",
+              "RelativeDocumentMoniker": "git_help.md",
+              "ToolTip": "G:\\NMC_downloader\\git_help.md",
+              "RelativeToolTip": "git_help.md",
+              "ViewState": "AgIAAMMAAAAAAAAAAADwv88AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2025-09-18T13:01:00.58Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
+            },
             {
               "$type": "Bookmark",
               "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -21,7 +44,7 @@
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }

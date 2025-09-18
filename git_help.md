@@ -205,7 +205,17 @@ git checkout feature/new-download-source  # 切换分支
 git push -u origin feature/new-download-source
 ```
 
-### 5. **通过 .gitignore 忽略不需要管理的文件**
+| 分支类型   | 命名策略（前缀） | 示例                                        |
+| :--------- | :--------------- | :------------------------------------------ |
+| **功能分支** | `feature/`       | `feature/user-login` `feature/issue-123-add-button` |
+| **修复分支** | `bugfix/` 或 `fix/` | `bugfix/login-error` `fix/456-header-overlap`       |
+| **热修分支** | `hotfix/`        | `hotfix/critical-security-patch`                    |
+| **发布分支** | `release/`       | `release/v2.1.0` `release/2025-09-18`               |
+| **文档分支** | `docs/`          | `docs/update-api-guide`                            |
+| **优化分支** | `chore/`         | `chore/improve-build-speed`                         |
+
+
+### 5. **通过 .gitignore 忽略不需要管理的文件..**
 创建 `.gitignore` 文件：
 ```
 # 忽略下载的图片数据
