@@ -3,12 +3,17 @@
   "WorkspaceRootPath": "G:\\NMC_downloader\\",
   "Documents": [
     {
+<<<<<<< HEAD
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|G:\\NMC_downloader\\git_help.md||{24510B54-A648-4D69-A6C5-F68CBDF07546}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:git_help.md||{24510B54-A648-4D69-A6C5-F68CBDF07546}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{894B3137-362C-4E9D-869E-F9A7438D2D98}|nmc_downloader.pyproj|G:\\NMC_downloader\\README.md||{24510B54-A648-4D69-A6C5-F68CBDF07546}",
       "RelativeMoniker": "D:0:0:{894B3137-362C-4E9D-869E-F9A7438D2D98}|nmc_downloader.pyproj|solutionrelative:README.md||{24510B54-A648-4D69-A6C5-F68CBDF07546}"
+=======
+      "AbsoluteMoniker": "D:0:0:{894B3137-362C-4E9D-869E-F9A7438D2D98}|nmc_downloader.pyproj|G:\\NMC_downloader\\git_help.md||{24510B54-A648-4D69-A6C5-F68CBDF07546}",
+      "RelativeMoniker": "D:0:0:{894B3137-362C-4E9D-869E-F9A7438D2D98}|nmc_downloader.pyproj|solutionrelative:git_help.md||{24510B54-A648-4D69-A6C5-F68CBDF07546}"
+>>>>>>> c0048f0
     }
   ],
   "DocumentGroupContainers": [
@@ -28,13 +33,18 @@
               "RelativeDocumentMoniker": "git_help.md",
               "ToolTip": "G:\\NMC_downloader\\git_help.md",
               "RelativeToolTip": "git_help.md",
+<<<<<<< HEAD
               "ViewState": "AgIAALoAAAAAAAAAAADwv74AAAARAAAAAAAAAA==",
+=======
+              "ViewState": "AgIAAMMAAAAAAAAAAADwv88AAAAjAAAAAAAAAA==",
+>>>>>>> c0048f0
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
               "WhenOpened": "2025-09-18T13:01:00.58Z",
               "IsPinned": true,
               "EditorCaption": ""
             },
             {
+<<<<<<< HEAD
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "README.md",
@@ -48,6 +58,8 @@
               "EditorCaption": ""
             },
             {
+=======
+>>>>>>> c0048f0
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
             },
