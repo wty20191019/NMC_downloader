@@ -160,7 +160,7 @@ flowchart TD
 
 
 
-要使用 Git 管理 GitHub 上的项目链接（如您提供的国家气象中心图片下载器），请按照以下步骤操作：
+## 要使用 Git 管理 GitHub 上的项目链接（如您提供的国家气象中心图片下载器），请按照以下步骤操作：
 
 ### 1. **克隆仓库到本地**
 ```bash
@@ -169,13 +169,23 @@ cd NMC_downloader
 ```
 
 ### 2. **日常管理操作**
+
 | 操作 | 命令 | 说明 |
 |------|------|------|
+| **查看分支** | `git branch` |  |
+| **创建新分支**| `git branch new-branch ` | new-branch 为分支名 |
+| **删除分支**| `git branch -d branch-name` | branch-name 为分支名 |
+| **切换分支** | `git checkout branch-name` | branch-name 为分支名 |
+| **将指定分支的更改合并到当前分支** | `git merge branch-name` | branch-name 指定分支名 |
+| **__** | `__` |  |
 | **查看状态** | `git status` | 查看文件修改状态 |
-| **添加文件** | `git add <文件名>`或`git add .`(add all) | 将修改加入暂存区 |
+| **添加文件** | `git add ` | `git add .`(add all) 将修改加入暂存区 |
 | **提交变更** | `git commit -m "描述信息"` | 提交变更到本地仓库 |
 | **推送更新** | `git push origin main` | 上传到 GitHub 仓库 |
 | **拉取更新** | `git pull` | 获取远程最新代码 |
+
+
+
 
 ### 3. **管理项目链接**
 对于项目中的链接（如气象数据源）：
