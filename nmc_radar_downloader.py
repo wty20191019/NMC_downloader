@@ -239,7 +239,7 @@ def get_utc_time_formatted():
     # 步进等级 (减少一小时/分钟) weeks=  days=   hours= ​	minutes=  seconds=  microseconds= 
     seven_days_ago_utc = current_utc_time - timedelta(hours=25)
     
-    # 格式化为YYYYMMDDHH
+    # 格式化为YYYYMMDDHHMM
     current_formatted = current_utc_time.strftime("%Y%m%d%H%M")
     seven_days_ago_formatted = seven_days_ago_utc.strftime("%Y%m%d%H%M")
     

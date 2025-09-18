@@ -33,15 +33,15 @@ def generate_image_urls(start_time, end_time):
 	urls = []
 	
 	# 解析时间参数
-	start_datetime = datetime.strptime(start_time, "%Y%m%d%H%M")
-	end_datetime = datetime.strptime(end_time, "%Y%m%d%H%M")
+	start_datetime = datetime.strptime(start_time, "%Y%m%d%H")
+	end_datetime = datetime.strptime(end_time, "%Y%m%d%H")
 	
 	current_datetime = start_datetime
 	while current_datetime <= end_datetime:
 		# 格式化日期部分（URL路径）
 		date_path = current_datetime.strftime("%Y/%m/%d")
 		# 格式化文件名部分
-		filename_time = current_datetime.strftime("%Y%m%d%H%M")
+		filename_time = current_datetime.strftime("%Y%m%d%H")
 		
 		# 构建URL   
 		#天气图叠加红外卫星云图 https://image.nmc.cn/product/2025/09/18/WESA/SEVP_NMC_WESA_SFER_ESPCT_ACWP_L00_P9_20250918120000000.jpg
@@ -127,7 +127,7 @@ def download_with_urlretrieve(url, save_path):
 
 
 
-def download_time_range_images(start_time, end_time, save_dir="downloaded_images", max_workers=10):
+def download_time_range_images(start_time, end_time, save_dir="downloaded_images", max_workers=5):
     """
     下载指定时间范围内的所有图片，使用多线程并行下载
     
@@ -240,8 +240,8 @@ def get_utc_time_formatted():
     seven_days_ago_utc = current_utc_time - timedelta(days=8)
     
     # 格式化为YYYYMMDDHH
-    current_formatted = current_utc_time.strftime("%Y%m%d%H%M")
-    seven_days_ago_formatted = seven_days_ago_utc.strftime("%Y%m%d%H%M")
+    current_formatted = current_utc_time.strftime("%Y%m%d%H")
+    seven_days_ago_formatted = seven_days_ago_utc.strftime("%Y%m%d%H")
     
     return current_formatted, seven_days_ago_formatted
 
@@ -253,7 +253,7 @@ def nmc_weatherchartWithRadar_downloader():
 
 	end_time,start_time = get_utc_time_formatted()
 
-	download_time_range_images(start_time, end_time, save_dir="nmc_radar_downloader")
+	download_time_range_images(start_time, end_time, save_dir="nmc_weatherchartWithRadar_downloader")
 	#__________________________start_time__end_time____________保存目录名
 
 	return 0
