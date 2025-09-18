@@ -17,7 +17,7 @@
 | `switch`        | 切换分支 (Git 2.23+)                                                     | `git switch branch-name`                                                                  |
 | `merge`         | 将指定分支的更改合并到当前分支                                             | `git merge branch-name`                                                                   |
 | `rebase`        | 将当前分支的提交在另一个基点之上重新应用（**变基**）                       | `git rebase main`                                                                         |
-| `log`           | 显示提交日志                                                             | `git log`；`git log --oneline` 简洁模式；`git log -p` 查看详细修改                         |
+| `log`           | 显示提交日志                                                             | `git log`；`git log --oneline` 简洁模式；`git log -p` 查看详细修改 ,按 ​**q**​ 键退出查看                        |
 | `diff`          | 显示提交之间、提交与工作区之间的更改内容                                   | `git diff` 查看未暂存修改；`git diff --staged` 查看已暂存修改                              |
 | `fetch`         | 从远程仓库下载对象和引用，但不自动合并                                   | `git fetch origin`                                                                        |
 | `pull`          | 从远程仓库获取并集成更改（默认为 `fetch` + `merge`）                      | `git pull origin main`                                                                    |
@@ -173,6 +173,7 @@ cd NMC_downloader
 | 操作 | 命令 | 说明 |
 |------|------|------|
 | **查看分支** | `git branch` |  |
+| **​查看分支图​** | `git log --oneline --graph --decorate --all` |  |
 | **创建新分支**| `git branch new-branch ` | new-branch 为分支名 |
 | **删除分支**| `git branch -d branch-name` | branch-name 为分支名 |
 | **切换分支** | `git checkout branch-name` | branch-name 为分支名 |
