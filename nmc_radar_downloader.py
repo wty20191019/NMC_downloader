@@ -127,7 +127,7 @@ def download_with_urlretrieve(url, save_path):
 
 
 
-def download_time_range_images(start_time, end_time, save_dir="downloaded_images", max_workers=5):
+def download_time_range_images(start_time, end_time, save_dir="downloaded_images", max_workers=10):
     """
     下载指定时间范围内的所有图片，使用多线程并行下载
     
