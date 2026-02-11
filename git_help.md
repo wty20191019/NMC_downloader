@@ -1,4 +1,116 @@
-﻿
+#  每日工作流程
+
+##### 拉取更新
+```git
+git pull
+```
+
+
+
+
+##### 查看状态
+```git
+git status
+```
+
+##### 添加文件____(`.`为所有文件，或`文件名`)
+```git
+git add .
+```
+
+##### 提交变更
+```git
+git commit -m "    "
+```
+
+##### 推送更新
+```git
+git push origin main
+```
+
+##### 拉取更新
+```git
+git pull
+```
+
+---
+
+#  分支管理
+
+##### ​查看分支图​
+```git
+git log --oneline --graph --decorate --all
+```
+##### ​查看分支
+```git
+git branch
+```
+##### ​切换到分支____`branch-name`
+```git
+git checkout branch-name
+```
+##### ​合并分支____(将指定分支`branch-name`的更改合并到当前分支)
+```git
+git merge branch-name
+```
+##### ​删除分支`branch-name`
+```git
+git branch -d branch-name
+```
+##### ​创建新分支`new-branch`
+```git
+git branch new-branch
+```
+* 分支命名规范
+  * 功能分支 `feature/`       | `feature/user-login` `feature/issue-123-add-button` 
+  * 修复分支  `bugfix/` 或 `fix/` | `bugfix/login-error` `fix/456-header-overlap`   
+  * 热修分支  `hotfix/`        | `hotfix/critical-security-patch`                    
+  * 发布分支 `release/`       | `release/v2.1.0` `release/2025-09-18`               
+  * 文档分支  `docs/`          | `docs/update-api-guide`                            
+  * 优化分支 `chore/`         | `chore/improve-build-speed`                         
+---
+
+#  **通过 .gitignore 忽略不需要管理的文件
+创建 `.gitignore` 文件：
+```
+# 忽略下载的图片数据
+nmc_radar_downloader/
+nmc_weatherchartWithRadar_downloader/
+
+# 忽略系统文件
+.DS_Store
+Thumbs.db
+```
+
+#  分支内管理
+
+## `reset` 将当前 `HEAD` 重置到指定状态                                             
+`git reset HEAD~1` 回退到上一个提交（保留修改）
+
+`git reset --hard HEAD~1` 强制回退并丢弃修改
+
+## `revert`创建一个新的提交来撤销指定提交的更改（安全操作）
+`git revert commit-hash`  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Git 常用命令速查表
 
 
@@ -160,7 +272,7 @@ flowchart TD
 
 
 
-## 要使用 Git 管理 GitHub 上的项目链接（如您提供的国家气象中心图片下载器），请按照以下步骤操作：
+## 要使用 Git 管理 GitHub 上的项目链接，请按照以下步骤操作：
 
 ### 1. **克隆仓库到本地**
 ```bash
@@ -176,6 +288,7 @@ cd NMC_downloader
 | **​查看分支图​** | `git log --oneline --graph --decorate --all` |  |
 | **创建新分支**| `git branch new-branch ` | new-branch 为分支名 |
 | **删除分支**| `git branch -d branch-name` | branch-name 为分支名 |
+| **强制删除分支**| `git branch -D branch-name` | branch-name 为分支名 |
 | **切换分支** | `git checkout branch-name` | branch-name 为分支名 |
 | **将指定分支的更改合并到当前分支** | `git merge branch-name` | branch-name 指定分支名 |
 | **__** | `__` |  |
@@ -216,118 +329,24 @@ git push -u origin feature/new-download-source
 | **优化分支** | `chore/`         | `chore/improve-build-speed`                         |
 
 ---
-### 每日工作流程
-
-##### 拉取更新
-```git
-git pull
-```
-
-### 7x24__写写写写写写写写..............(写不动了) then：
-
-
-##### 查看状态
-```git
-git status
-```
-
-##### 添加文件____(`.`为所有文件，或`文件名`)
-```git
-git add .
-```
-
-##### 提交变更
-```git
-git commit -m "描述信息"
-```
-
-##### 推送更新
-```git
-git push origin main
-```
-
-##### 拉取更新
-```git
-git pull
-```
 
 ---
 
-### 分支管理
+# Git的垃圾回收
 
-##### ​查看分支图​
-```git
-git log --oneline --graph --decorate --all
-```
-##### ​查看分支
-```git
-git branch
-```
-##### ​切换到分支____`branch-name`
-```git
-git checkout branch-name
-```
-##### ​合并分支____(将指定分支`branch-name`的更改合并到当前分支)
-```git
-git merge branch-name
-```
-##### ​删除分支`branch-name`
-```git
-git branch -d branch-name
-```
-##### ​创建新分支`new-branch`
-```git
-git branch new-branch
-```
-* 分支命名规范
-  * 功能分支 `feature/`       | `feature/user-login` `feature/issue-123-add-button` 
-  * 修复分支  `bugfix/` 或 `fix/` | `bugfix/login-error` `fix/456-header-overlap`   
-  * 热修分支  `hotfix/`        | `hotfix/critical-security-patch`                    
-  * 发布分支 `release/`       | `release/v2.1.0` `release/2025-09-18`               
-  * 文档分支  `docs/`          | `docs/update-api-guide`                            
-  * 优化分支 `chore/`         | `chore/improve-build-speed`                         
----
+`git gc --prune=<date>`：删除指定时间之前的松散对象
 
-### 5. **通过 .gitignore 忽略不需要管理的文件..**
-创建 `.gitignore` 文件：
-```
-# 忽略下载的图片数据
-nmc_radar_downloader/
-nmc_weatherchartWithRadar_downloader/
+`git gc --prune=now`表示立即删除所有过期对象
 
-# 忽略系统文件
-.DS_Store
-Thumbs.db
-```
+`git gc` 执行标准的垃圾回收，清理松散对象并打包引用
 
-### 实际应用场景示例：
-**修改数据源链接后提交：**
-```bash
-# 1. 修改源代码中的URL
-vim nmc_downloader/nmc_radar_downloader.py
+`git gc --auto` 仅在需要时自动触发垃圾回收（Git 在部分操作后会自动运行此命令）
 
-# 2. 提交变更
-git add nmc_downloader/nmc_radar_downloader.py
-git commit -m "更新雷达数据源URL"
-git push
-```
+`git gc --aggressive` 进行更彻底的清理和压缩，耗时较长，适用于仓库历史庞大、需深度优化的情况
 
-**恢复旧版链接配置：**
-```bash
-# 查找历史记录
-git log --oneline -- nmc_downloader/nmc_radar_downloader.py
+`git gc --prune=<date>` 删除指定时间之前的松散对象（例如 --prune=now表示立即删除所有过期对象）
 
-# 恢复特定版本 (例如 abc123)
-git checkout abc123 -- nmc_downloader/nmc_radar_downloader.py
-```
-
-> **重要提示**：
-> 1. 项目中的气象图片实际存储在 `nmc_*_downloader/` 目录，建议通过 `.gitignore` 忽略这些目录
-> 2. 链接变更应通过提交代码修改实现，不要直接提交下载的图片数据
-> 3. 定期使用 `git pull` 获取原作者的最新更新
-
-这样既能有效管理项目代码和链接配置，又能避免仓库被大量图片数据膨胀。
-
+`git gc --no-prune` 运行垃圾回收但不删除任何松散对象
 
 
 
